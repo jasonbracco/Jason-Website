@@ -1,11 +1,11 @@
 import Layout from './Layout'
 import LandingMessage from './components/LandingMessage';
 import Experience from './components/Experience';
-import JasonImage from './components/JasonImage'
+import JasonImage from './components/JasonImage';
 
 function App() {
   return(
-      <Layout>
+      <Layout> 
         <div className="horizontal-layout">
             <div className="left-half">
               <div className="intro-text">
