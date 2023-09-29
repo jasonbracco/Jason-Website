@@ -9,22 +9,39 @@ function App() {
     <Router>
       <div>
         <NavBar />
-          <div className="horizontal-layout">
-              <div className="left-half">
-                <div className="intro-text">
-                  <LandingMessage/>
-                </div>
-              </div>
-              <div className="right-half">
-                <div className="jason-image">
-                  <JasonImage />
-                </div>
-              </div>
+        {/* <div className="horizontal-layout">
+          <div className="left-half">
+            <div className="intro-text">
+              <LandingMessage/>
+            </div>
           </div>
-          <Routes>
-            <Route path="/experience" element={< Experience />} />
-          </Routes>
-          </div>    
+          <div className="right-half">
+            <div className="jason-image">
+              <JasonImage />
+            </div>
+          </div>
+        </div> */}
+        <Routes>
+          <Route
+            path="/"
+            element={ // Render LandingMessage and JasonImage on the home page ("/")
+              <div className="horizontal-layout">
+                <div className="left-half">
+                  <div className="intro-text">
+                    <LandingMessage />
+                  </div>
+                </div>
+                <div className="right-half">
+                  <div className="jason-image">
+                    <JasonImage />
+                  </div>
+                </div>
+              </div>
+            }
+          />
+          <Route path="/experience" element={< Experience />} />
+        </Routes>
+      </div>    
     </Router>
   )
 }
