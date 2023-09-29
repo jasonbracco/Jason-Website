@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter
 import './Styles.css'; // Import your CSS file here
 import 'bootstrap/dist/css/bootstrap.css'
 import NavBar from './components/NavBar'
@@ -10,10 +11,12 @@ type LayoutProps = {
 function Layout({children}: LayoutProps) {
   return (
     <div>
-        <NavBar />
-        <div className="layout">
-            {children}
-        </div>
+        <Router>
+            <NavBar />
+            <div className="layout">
+                {children}
+            </div>
+        </Router>
     </div>
   );
 }

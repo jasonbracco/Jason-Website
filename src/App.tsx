@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom' 
 import Layout from './Layout'
 import LandingMessage from './components/LandingMessage';
 import Experience from './components/Experience';
@@ -5,7 +6,10 @@ import JasonImage from './components/JasonImage';
 
 function App() {
   return(
-      <Layout> 
+      <Layout>
+        <Routes>
+          <Route path="/experience" Component={Experience} />
+        </Routes>
         <div className="horizontal-layout">
             <div className="left-half">
               <div className="intro-text">
