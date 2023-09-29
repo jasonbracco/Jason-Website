@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import './Styles.css'; // Import your CSS file here
+import 'bootstrap/dist/css/bootstrap.css'
 import NavBar from './components/NavBar'
 
 type LayoutProps = {

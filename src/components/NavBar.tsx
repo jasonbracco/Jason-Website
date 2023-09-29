@@ -2,10 +2,30 @@ function NavBar(){
 
     return(
         <div className="navbar">
-            <div className="navbar-links">
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer"> GitHub</a> 
-                <a href="https://www.linkedin.com/in/jason-bracco/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            </div>
+            <nav className="navbar navbar-expand-lg bg-body-tertiary" >
+                <div className="container-fluid">
+                    <a className="navbar-brand" href="#">Home</a>
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav">
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Experience</a>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#">Blog</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="https://www.linkedin.com/in/jason-bracco/" className="nav-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            </li>
+                            <li className="nav-item">
+                                <a href="https://github.com/yourusername" className="nav-link" target="_blank" rel="noopener noreferrer"> GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     )
 }
