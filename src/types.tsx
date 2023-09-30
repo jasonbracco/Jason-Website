@@ -4,7 +4,8 @@ export type WorkExperience = {
     role: string,
     location: string,
     period: string,
-    description: string[]
+    description: string[],
+    index: number
 };
 
 export type Education = {
@@ -12,12 +13,14 @@ export type Education = {
     program: string,
     degree: string,
     location: string,
-    period: string 
+    period: string,
+    index: number
 };
 
 export type TechnicalProject = {
     name: string,
     description: string,
     gh_link: string,
-    demo_link: string
+    demo_link: string,
+    index: number
 };

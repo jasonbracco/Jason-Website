@@ -16,13 +16,13 @@ function NavBar(){
                                     <Link className="nav-link" to="/experience">Experience</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#">Blog</a>
+                                    <a className="nav-link" href="#">Blog - add icon</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="https://www.linkedin.com/in/jason-bracco/" className="nav-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                                    <a href="https://www.linkedin.com/in/jason-bracco/" className="nav-link" target="_blank" rel="noopener noreferrer">LinkedIn - add icon</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a href="https://github.com/yourusername" className="nav-link" target="_blank" rel="noopener noreferrer"> GitHub</a>
+                                    <a href="https://github.com/yourusername" className="nav-link" target="_blank" rel="noopener noreferrer"> GitHub - add icon</a>
                                 </li>
                             </ul>
                         </div>
