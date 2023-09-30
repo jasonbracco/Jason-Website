@@ -23,12 +23,12 @@ function Experience(){
     }
 
     let gw: Education = {
-        name:'The Greoge Washington University',
+        name:'The George Washington University',
         program: 'School of Engineering and Applied Sciences (SEAS)',
         degree: 'Bachelor of Science, Mechanical Engineering, concentration in Aerospace Engineering',
         location: 'Washington, DC',
         period: '08/2014 - 05/2018',
-        index: 1
+        index: 3
     }
 
     let flatiron: Education = {
@@ -37,7 +37,7 @@ function Experience(){
         degree: 'Full Stack Web Development, Ruby on Rails and JavaScript',
         location: 'Remote',
         period: '04/2022 - 04/2023',
-        index: 2
+        index: 4
     }
 
     let mba_csi: WorkExperience = {
@@ -50,7 +50,7 @@ function Experience(){
             'Performed queries using Oracle Business Intelligence to pinpoint the age and need to replace certain classes of vehicles in the overall fleet of 240,000 vehicles',
             'Played active role in testing and assessment of new Long Life Vehicle selection from more than 5 different prototypes, including trips to the TRC in Ohio for functional, on road, evaluations'
         ],
-        index: 1
+        index: 5
     }
 
     let aquicore_one: WorkExperience = {
@@ -64,7 +64,7 @@ function Experience(){
             'Proactively investigated data quality issues leading to a 93% internal technical support ticket capture rate',
             'Guided customers throughout the support lifecycle, engaging with multiple levels of personnel and 3rd party contractors'
         ],
-        index: 2
+        index: 6
     }
     
     let aquicore_two: WorkExperience = {
@@ -78,7 +78,7 @@ function Experience(){
             'Enabled a 200% decrease in time to resolution for product support tickets through structured support ticket reviews',
             'Tracked internal support CSAT score through quantitative and qualitative data'
         ],
-        index: 3
+        index: 7
     }
 
     let experienceArray = [aquicore_two, aquicore_one, mba_csi];
@@ -131,7 +131,7 @@ function Experience(){
             <h3>Work Experience:</h3>
             {experienceArray.map((experience, index) => (
                 <div className='experience-card' key={index}>
-                    <ExperienceCard experience={experience} index={index} />
+                    <ExperienceCard experience={experience} />
                 </div>
             ))
             }
