@@ -20,36 +20,42 @@
     text-decoration: underline;
 }
 
-.layout {
+/* .layout {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure at least 100% viewport height */
-    align-items: center; /* Center the content horizontally */
-    justify-content: center; /* Center the content vertically */
-  }
+    min-height: 100vh; 
+    align-items: center; 
+    justify-content: center; 
+  } */
 
-.horizontal-layout { 
+/* .horizontal-layout { 
     display:flex;
     flex-direction: row;
     width: 100%;
-}
+} */
 
-.left-half, .right-half {
-  flex: 1; /* distribute available space equally among these two sections */
-  text-align: center; /* center text horizontally */
-}
+/* .left-half{
+  flex: 1; 
+  text-align: center; 
+} */
 
-.intro-text {
+/* .intro-text {
     padding: 100px;
     font-size: medium;
     text-align: left;
-}
+} */
 
 .experience {
     width: 100%;
 }
 
 .image{
-    height: 600px;
-    width: 650px;
+    height: auto;
+    width: 100%;
 }
+
+.work-accordion, .education-accordion, .project-accordion{
+    width: 40%;
+    padding: 30px
+}
+
