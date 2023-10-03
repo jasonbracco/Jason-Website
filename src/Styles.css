@@ -4,7 +4,7 @@
     top: 0; /* Align it to the top of the image */
     left: 0;
     right: 0; /* Align it to the right of the image */
-    width: 100%;
+    /* width: 100%; */
     z-index: 2; /* Ensure the navbar appears above other elements */
 }
 
@@ -64,8 +64,14 @@
 }
 
 .experience-container{
-    width: 100vw; /* Set the width to 100% of the viewport width */
+    float: right;
+    width: 90vw; /* Set the width to 100% of the viewport width */
     height: 100vh; /* Set the height to 100% of the viewport height */
-    z-index: 1; /* Set the z-index to 1 to place it behind the navbar */
+    padding: 100px;
+    z-index: 3; /* Set the z-index to 1 to place it behind the navbar */
+}
+
+.please-work{
+  z-index: 3; /* Set a higher z-index value */
 }
 

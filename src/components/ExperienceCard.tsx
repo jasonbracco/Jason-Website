@@ -16,12 +16,11 @@ function ExperienceCard({experience}: ExperienceCardProps){
             <div className="accordion-item">
                 <h2 className="accordion-header">
                 <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#${collapseId}`} aria-expanded="false" aria-controls={collapseId}>
-                    {experience.company} | {experience.role} | {experience.location}
+                    {experience.company} | {experience.role} | {experience.period}
                 </button>
                 </h2>
                 <div id={collapseId} className="accordion-collapse collapse" aria-labelledby={`heading-${experience.index}`} data-bs-parent={`#${accordionId}`}>
                     <div className="accordion-body">
-                        <em>{experience.period}</em>
                         <ul className="job-highlights">
                             {jobDescriptionArray.map((line, index) => (
                                 <li key={index}>{line}</li>

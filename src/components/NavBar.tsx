@@ -7,13 +7,12 @@ type NavBarProps = {
 
 function NavBar({ isSticky }: NavBarProps) {
 
-    const navbarClasses = isSticky ? 'navbar sticky' : 'navbar';
-
+    const navbarClasses = isSticky ? 'navbar-sticky' : 'navbar';
 
     return(
             <div>
-                <nav className={`navbar navbar-expand-lg bg-body-tertiary ${navbarClasses}1`} style={{ position: 'fixed' }}>
-                    <div className="container-fluid">
+                <nav className={`bg-body-tertiary ${navbarClasses}`} style={{ position: 'fixed' }}>
+                    <div>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
