@@ -1,17 +1,27 @@
+import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
-function NavBar(){
+type NavBarProps = {
+    isSticky: boolean;
+  };
+
+function NavBar({ isSticky }: NavBarProps) {
+
+    const navbarClasses = isSticky ? 'navbar sticky' : 'navbar';
+
 
     return(
-            <div className="navbar">
-                <nav className="navbar navbar-expand-lg bg-body-tertiary" >
+            <div>
+                <nav className={`navbar navbar-expand-lg bg-body-tertiary ${navbarClasses}1`} style={{ position: 'fixed' }}>
                     <div className="container-fluid">
-                        <Link className="nav-link" to="/">Home</Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
                         <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav">
+                            <ul className="nav flex-column">
+                                <li className="nav-item">
+                                    <Link className="nav-link" to="/">Home</Link>
+                                </li>
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/experience">Experience</Link>
                                 </li>

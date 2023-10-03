@@ -1,37 +1,57 @@
+import React, {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import LandingMessage from './components/LandingMessage';
 import Experience from './components/Experience';
-import JasonImage from './components/JasonImage';
+import pictureJason from './Photos/pictureJason.jpg'; 
 
 function App() {
+
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) { 
+        setIsSticky(true);
+      }
+      else { 
+        setIsSticky(false);
+      }
+    }
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return(
     <Router>
       <div>
-        <NavBar />
-        <div className="layout">
-          <Routes>
-            <Route
-              path="/"
-              element={ // Render LandingMessage and JasonImage on the home page ("/")
-                <div className="horizontal-layout">
-                  <div className="left-half">
-                    <div className="intro-text">
-                      <LandingMessage />
-                    </div>
-                  </div>
-                  <div className="right-half">
-                    <div className="jason-image">
-                      <JasonImage />
-                    </div>
-                  </div>
-                </div>
-              }
-            />
-            <Route path="/experience" element={< Experience />} />
-          </Routes>
+        <div className="navbar">
+          <NavBar isSticky={isSticky}/>
         </div>
-      </div>    
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <div className="image-container">
+                <img className="image" src={pictureJason} alt="Jason" />
+                <div className="text-overlay">
+                  <h2>Hi! I'm Jason</h2>
+                  <h2>A Software Engineer</h2> 
+                  <h2>Based in New York City</h2>
+                </div>
+              </div>
+            }
+          />
+          <Route 
+            path="/experience" 
+            element={
+              <div className="experience-container">
+                <Experience />
+              </div>}
+          />
+        </Routes>
+      </div>
     </Router>
   )
 }
