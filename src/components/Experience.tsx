@@ -86,7 +86,7 @@ function Experience(){
     let technicalProjectsArray = [restaurant_review, photo_share];
 
     return (
-        <div className="please-work">
+        <div>
             <div className="work-accordion">
                 <h3>Work Experience:</h3>
                 {experienceArray.map((experience, index) => (

@@ -1,4 +1,3 @@
-import React, {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Experience from './components/Experience';
@@ -6,28 +5,11 @@ import pictureJason from './Photos/pictureJason.jpg';
 
 function App() {
 
-  const [isSticky, setIsSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) { 
-        setIsSticky(true);
-      }
-      else { 
-        setIsSticky(false);
-      }
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return(
     <Router>
       <div>
         <div className="navbar">
-          <NavBar isSticky={isSticky}/>
+          <NavBar/>
         </div>
         <Routes>
           <Route

@@ -1,17 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-type NavBarProps = {
-    isSticky: boolean;
-  };
-
-function NavBar({ isSticky }: NavBarProps) {
-
-    const navbarClasses = isSticky ? 'navbar-sticky' : 'navbar';
+function NavBar() {
 
     return(
             <div>
-                <nav className={`bg-body-tertiary ${navbarClasses}`} style={{ position: 'fixed' }}>
+                <nav className={`navber-sticky`} style={{ position: 'fixed' }}>
                     <div>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
