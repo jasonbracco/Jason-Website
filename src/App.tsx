@@ -18,9 +18,10 @@ function App() {
               <div className="image-container">
                 <img className="image" src={pictureJason} alt="Jason" />
                 <div className="text-overlay">
-                  <h2>Hi! I'm Jason</h2>
-                  <h2>A Software Engineer</h2> 
-                  <h2>Based in New York City</h2>
+                  <h4>Hey, I'm </h4>
+                  <h2>Jason Bracco</h2>
+                  {/* <h2>A Software Engineer</h2> 
+                  <h2>Based in New York City</h2> */}
                 </div>
               </div>
             }
