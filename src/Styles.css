@@ -3,12 +3,12 @@
     position: fixed; 
     top: 0;
     z-index: 2; 
-    color: rgba(175, 62, 6, 0.76);
+    color: rgba(90, 64, 6, 0.76);
 }
 
 .navbar.sticky {
     position: fixed;
-    color: rgba(175, 62, 6, 0.76);
+    color: rgba(90, 64, 6, 0.76);
     top: 0;
     z-index: 2;
 }
@@ -19,25 +19,25 @@
 }
 
 .menu-button{
-    color: rgba(175, 62, 6, 0.76) !important; 
+    color: rgba(90, 64, 6, 0.76) !important; 
     border: none !important;
 }
 
 .navbar a {
     text-decoration: none; /* removes underlines */ 
-    color: rgba(175, 62, 6, 0.76);
+    color: rgba(90, 64, 6, 0.76);
     margin: 0 10px; /* add spacing between links */
 }
 
 .navbar a:hover { /*styling for the links when hovered */
     text-decoration: underline;
-    color: rgb(249, 192, 192);
+    color: rgba(90, 64, 6, 0.76);
 }
 
 .image-container { 
-    width: 100vw; /* Set the width to 100% of the viewport width */
-    height: 100vh; /* Set the height to 100% of the viewport height */
-    overflow: hidden; /* Hide any overflow content */
+    /* width: 100vw;  */
+    /* height: 100vh;  */
+    /* overflow: hidden;  */
     z-index: 1; /* Set the z-index to 1 to place it behind the navbar */
 }
 
@@ -68,15 +68,15 @@
 }
 
 .work-accordion, .education-accordion, .project-accordion{
-    width: 40%;
-    padding: 30px
+    width: 70%;
+    padding: 30px;
 }
 
 .experience-container{
     float: right;
-    width: 92vw; /* Set the width to 100% of the viewport width */
-    height: 100vh; /* Set the height to 100% of the viewport height */
-    padding: 100px;
+    width: 90vw; 
+    height: 100vh; 
+    padding: 0px;
     z-index: 3; /* Set the z-index to 1 to place it behind the navbar */
 }
 

@@ -20,8 +20,6 @@ function App() {
                 <div className="text-overlay">
                   <h4>Hey, I'm </h4>
                   <h2>Jason Bracco</h2>
-                  {/* <h2>A Software Engineer</h2> 
-                  <h2>Based in New York City</h2> */}
                 </div>
               </div>
             }
