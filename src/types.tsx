@@ -14,7 +14,8 @@ export type Education = {
     degree: string,
     location: string,
     period: string,
-    index: number
+    index: number,
+    description: string
 };
 
 export type TechnicalProject = {

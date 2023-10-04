@@ -23,7 +23,7 @@ function ExperienceCard({experience}: ExperienceCardProps){
                     <div className="accordion-body">
                         <ul className="job-highlights">
                             {jobDescriptionArray.map((line, index) => (
-                                <li key={index}>{line}</li>
+                                <p key={index}>{line}</p>
                             ))}
                         </ul>                    
                     </div>
