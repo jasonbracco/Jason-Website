@@ -1,33 +1,31 @@
 import { Education } from '../types';
+import {useState} from 'react'
 
-type ExperienceCardProps = {
+type EducationCardProps = {
     education: Education;
 }
+ 
+function EducationCard({ education }: EducationCardProps) {
+    const [isHighlightsVisible, setHighlightsVisible] = useState(false);
 
-function EducationCard({education}: ExperienceCardProps){
+    const toggleHighlights = () => {
+      setHighlightsVisible(!isHighlightsVisible);
+    };
 
-    const accordionId = `accordion-${education.index}`;
-    const collapseId = `collapse-${education.index}`;
-
-    return(
-        <div className="accordion" id={accordionId}>
-            <div className="accordion-item">
-                <h2 className="accordion-header">
-                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#${collapseId}`} aria-expanded="false" aria-controls={collapseId}>
-                    {education.name}, {education.program} | {education.period}
-                </button>
-                </h2>
-                <div id={collapseId} className="accordion-collapse collapse" aria-labelledby={`heading-${education.index}`} data-bs-parent={`#${accordionId}`}>
-                    <div className="accordion-body">
-                        <em>{education.degree}</em>
-                        <br></br>
-                        <br></br>
-                        {education.description}         
-                    </div>
-                </div>
-            </div>
-        </div> 
-    )
+    return (
+        <div className="work-card">
+          <div className="work-card-header" onClick={toggleHighlights}>
+            <img className="company-logo" src={education.image} alt="Company Logo" />
+            <em className="job-overview">
+              {education.name} | {education.program} | {education.period}
+            </em>
+          </div>
+          {isHighlightsVisible && (
+            <div className="job-highlights">{education.description}</div>
+            )}
+        </div>
+        
+    );
 }
 
 export default EducationCard

@@ -1,5 +1,7 @@
 import { WorkExperience, Education, TechnicalProject } from '../types';
 import ExperienceCard from './ExperienceCard';
+import EducationCard from './EducationCard';
+
 
 
 function Experience(){
@@ -27,7 +29,8 @@ function Experience(){
         location: 'Washington, DC',
         period: '08/2014 - 05/2018',
         index: 3,
-        description: 'I knew from a young age I wanted to know how things worked.  I went into Mechanical Engineering because it formed the basis for how things got built and interacted with the world.  The mindset I built going through this program laid the foundation for how I want to approach my life and career.'
+        description: 'I knew from a young age I wanted to know how things worked.  I went into Mechanical Engineering because it formed the basis for how things got built and interacted with the world.  The mindset I built going through this program laid the foundation for how I want to approach my life and career.',
+        image: 'src/Photos/gw.png'
     }
 
     let flatiron: Education = {
@@ -37,7 +40,8 @@ function Experience(){
         location: 'Remote',
         period: '04/2022 - 04/2023',
         index: 4,
-        description: 'Keeping with the theme of understanding how things work, I realized that my curiosity was shifting from the physical to the digital.  I wanted to understand and learn how the applications I interact with every day were created, and I wanted to be able to bring my own ideas to life.'
+        description: 'Keeping with the theme of trying to understand how things work, I realized that my curiosity was shifting from the physical to the digital.  I wanted to understand and learn how the applications I interact with every day were created, and I wanted to be able to bring my own ideas to life.',
+        image: 'src/Photos/flatiron.png'
     }
 
     let mba_csi: WorkExperience = {
@@ -98,13 +102,20 @@ function Experience(){
     return (
         <div>
             <div className="work-experience">
-                <p>Where I've Been, And What I've Done:</p>
+                <strong className="where-i-text">Places I've Worked</strong>
                 {experienceArray.map((experience, index) => (
                     <div className='experience-card' key={index}>
                         <ExperienceCard experience={experience} />
                     </div>
-                ))
-                }
+                ))}
+                <br></br>
+                <br></br>
+                <strong className="where-i-text">Places I've Learned</strong>
+                {educationArray.map((education, index) => (
+                    <div className='experience-card' key={index}>
+                        <EducationCard education={education} />
+                    </div>
+                ))}
             </div>
         </div>
     )

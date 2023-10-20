@@ -17,6 +17,7 @@ export type Education = {
     period: string,
     index: number,
     description: string
+    image: string
 };
 
 export type TechnicalProject = {
