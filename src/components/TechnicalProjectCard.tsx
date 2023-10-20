@@ -19,9 +19,7 @@ function TechnicalProjectCard({project}: ExperienceCardProps){
                 </h2>
                 <div id={collapseId} className="accordion-collapse collapse" aria-labelledby={`heading-${project.index}`} data-bs-parent={`#${accordionId}`}>
                     <div className="accordion-body">
-                        <em>{project.description}</em>
-                        <br></br>
-                        <br></br>       
+                        <p>{project.description}</p>     
                         <a href={`${project.gh_link}`}>GitHub</a> | <a href={`${project.demo_link}`}>Demo</a>
                     </div>
                 </div>

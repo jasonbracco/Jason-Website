@@ -94,6 +94,7 @@ function Experience(){
 
     return (
         <div>
+            <p>How I got here:</p>
             <div className="work-accordion">
                 <h3>Work Experience:</h3>
                 {experienceArray.map((experience, index) => (
