@@ -67,17 +67,48 @@
     z-index: 0; /* Set the z-index to 0 to place it behind the navbar */
 }
 
-.work-accordion, .education-accordion, .project-accordion{
-    width: 70%;
-    padding: 30px;
+.work-experience{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    max-width: 55%; 
+    margin: 0 auto; 
+    text-align: left; 
+    padding-top: 70px;
 }
 
-.experience-container{
-    float: right;
-    width: 90vw; 
-    height: 100vh; 
-    padding: 0px;
-    z-index: 3; /* Set the z-index to 1 to place it behind the navbar */
+.experience-card {
+    width: 100%;
+    padding: 5px;
 }
 
+.company-logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px
+}
+
+.work-card { 
+    border: 1px solid #000000;
+    width: 100%;
+}
+
+.work-card-header {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.job-overview {
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+.job-highlights { 
+    list-style: none;
+    padding: 15px;
+}
 

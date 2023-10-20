@@ -1,7 +1,5 @@
 import { WorkExperience, Education, TechnicalProject } from '../types';
 import ExperienceCard from './ExperienceCard';
-import EducationCard from './EducationCard';
-import TechnicalProjectCard from './TechnicalProjectCard';
 
 
 function Experience(){
@@ -53,7 +51,9 @@ function Experience(){
             'Evaluating 6 new models, both quantitatively and qualitatively, was no easy task.  That, plus the native bureaucracy of a quasi-government agency, dragged the process on weeks, months, and eventually years after I started contributing to this project.',
             'I was not fond of the pace at which everything operated at the USPS vehicle engineering office, and I quickly found my curiosity in the various programs waning.  I knew I needed a pivot.'
         ],
-        index: 5
+        index: 5,
+        image: 'src/Photos/mba.png'
+
     }
 
     let aquicore_one: WorkExperience = {
@@ -68,11 +68,12 @@ function Experience(){
             'A couple months in, after an acquisition, I started learning about networking infrastructre, and how a Building Management System (BMS) works on a controls level through BACnet and TCP/IP protocols.',
             'I was able to bring the engineering mindset I had developed and channel my curiosity toward picking up what had been totally foreign concepts - eventually mastering these concepts to a point where I could effectively resolve issues in the field, and become an internal subject matter expert.' 
         ],
-        index: 6
+        index: 6,
+        image: 'src/Photos/aquicore.png',
     }
     
     let aquicore_two: WorkExperience = {
-        company: 'Aquicore', 
+        company: 'Aquicore (Acquired by Infogrid)',
         role: 'Technical Services Team Lead', 
         location: 'Washington, DC', 
         period: '12/2021 - Present', 
@@ -85,18 +86,19 @@ function Experience(){
             'I own a piece of the Product at Aquicore from a planning and prioritization perspective - a role that has decreased the time for highly prioritized bug tickets to get resolved by 200%.',
             'Now that i have become a certified full stack software engineer, I have started on the next journey in this role - doing some hands on engineering work in a support capacity.  I cannot wait to see where this takes me.'
         ],
-        index: 7
-    }
+        index: 7,
+        image: 'src/Photos/infogrid.png'
 
+    }
+ 
     let experienceArray = [aquicore_two, aquicore_one, mba_csi];
     let educationArray = [flatiron, gw];
     let technicalProjectsArray = [restaurant_review, photo_share];
 
     return (
         <div>
-            <p>How I got here:</p>
-            <div className="work-accordion">
-                <h3>Work Experience:</h3>
+            <div className="work-experience">
+                <p>Where I've Been, And What I've Done:</p>
                 {experienceArray.map((experience, index) => (
                     <div className='experience-card' key={index}>
                         <ExperienceCard experience={experience} />
@@ -104,33 +106,6 @@ function Experience(){
                 ))
                 }
             </div>
-            <div className="education-accordion">
-                <h3>Education:</h3>
-                {educationArray.map((education, index) => (
-                    <div className='education-card' key={index}>
-                        <EducationCard education={education} />
-                    </div>
-                ))
-                }
-            </div>
-            <br></br>
-            <div className="project-accordion">
-                <h3>Technical Projects:</h3>
-                {technicalProjectsArray.map((project, index) => (
-                    <div className='project-card' key={index}>
-                        <TechnicalProjectCard project={project} />
-                    </div>
-                ))
-                }
-            </div>
-            <h2>jfjfjfjf</h2>
-            <h2>jfjfjfjf</h2>
-            <h2>jfjfjfjf</h2>
-            <h2>jfjfjfjf</h2>
-            <h2>jfjfjfjf</h2>
-            <h2>jfjfjfjf</h2>
-            <h2>jfjfjfjf</h2>
-            <h2>jfjfjfjf</h2>
         </div>
     )
 }

@@ -5,7 +5,8 @@ export type WorkExperience = {
     location: string,
     period: string,
     description: string[],
-    index: number
+    index: number,
+    image: string
 };
 
 export type Education = {

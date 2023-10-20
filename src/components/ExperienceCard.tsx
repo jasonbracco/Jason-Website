@@ -1,36 +1,37 @@
-import { WorkExperience} from '../types';
+import { WorkExperience } from '../types';
+import {useState} from 'react'
 
 type ExperienceCardProps = {
     experience: WorkExperience;
 }
 
-function ExperienceCard({experience}: ExperienceCardProps){
+function ExperienceCard({ experience }: ExperienceCardProps) {
+    const [isHighlightsVisible, setHighlightsVisible] = useState(false);
+
+    const toggleHighlights = () => {
+      setHighlightsVisible(!isHighlightsVisible);
+    };
 
     const jobDescriptionArray: string[] = experience.description;
+    console.log(experience)
 
-    const accordionId = `accordion-${experience.index}`;
-    const collapseId = `collapse-${experience.index}`;
-
-    return(
-        <div className="accordion" id={accordionId}>
-            <div className="accordion-item">
-                <h2 className="accordion-header">
-                <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target={`#${collapseId}`} aria-expanded="false" aria-controls={collapseId}>
-                    {experience.company} | {experience.role} | {experience.period}
-                </button>
-                </h2>
-                <div id={collapseId} className="accordion-collapse collapse" aria-labelledby={`heading-${experience.index}`} data-bs-parent={`#${accordionId}`}>
-                    <div className="accordion-body">
-                        <ul className="job-highlights">
-                            {jobDescriptionArray.map((line, index) => (
-                                <p key={index}>{line}</p>
-                            ))}
-                        </ul>                    
-                    </div>
-                </div>
-            </div>
-        </div> 
-    )
+    return (
+        <div className="work-card">
+          <div className="work-card-header" onClick={toggleHighlights}>
+            <img className="company-logo" src={experience.image} alt="Company Logo" />
+            <em className="job-overview">
+              {experience.company} | {experience.role} | {experience.period}
+            </em>
+          </div>
+          {isHighlightsVisible && (
+            <ul className="job-highlights">
+              {experience.description.map((line, index) => (
+                <li key={index}>{line}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+    );
 }
 
 export default ExperienceCard
