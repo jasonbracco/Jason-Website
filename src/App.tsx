@@ -28,8 +28,8 @@ function App() {
           <Route 
             path="/experience" 
             element={
-              <div className="image-container">
-                <img className="image" src={canyon} alt="canyon" />
+              <div className="experience-image-container">
+                <div className="fixed-background-image" style={{ backgroundImage: `url(${canyon})` }}></div>
                 <div className="experience-container">
                   <Experience />
                 </div>

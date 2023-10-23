@@ -102,7 +102,6 @@ function Experience(){
     return (
         <div>
             <div className="work-experience">
-                <strong className="where-i-text">Places I've Worked</strong>
                 {experienceArray.map((experience, index) => (
                     <div className='experience-card' key={index}>
                         <ExperienceCard experience={experience} />
@@ -110,7 +109,6 @@ function Experience(){
                 ))}
                 <br></br>
                 <br></br>
-                <strong className="where-i-text">Places I've Learned</strong>
                 {educationArray.map((education, index) => (
                     <div className='experience-card' key={index}>
                         <EducationCard education={education} />
