@@ -7,13 +7,13 @@ type ExperienceCardProps = {
 
 function ExperienceCard({ experience }: ExperienceCardProps) {
     const [isHighlightsVisible, setHighlightsVisible] = useState(false);
+    console.log(experience)
 
     const toggleHighlights = () => {
       setHighlightsVisible(!isHighlightsVisible);
     };
 
     const jobDescriptionArray: string[] = experience.description;
-    console.log(experience)
 
     return (
         <div className="work-card">

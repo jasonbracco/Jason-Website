@@ -7,18 +7,16 @@ import EducationCard from './EducationCard';
 function Experience(){
 
     let restaurant_review: TechnicalProject = {
-        name: 'Restaurant Review App',
-        description: 'I value the experence of eating and making food very highly.  I created a program that allows users to input where they have eaten, review those restaurants, and check out other user reviews of the same and other restaurants.  I used a React front end written in JavaScript with a Ruby on Rails back end and stored data in a PostgreSQL database.',
-        gh_link: 'https://github.com/jasonbracco/phase-4-project-real',
-        demo_link: 'coming soon',
+        name: 'Wedding Wizard',
+        description: 'As my fiance and I were planning our wedding, I found it an visually unappealing to track everything in a spreadsheet.  There was no satisfaction when a task was completed, and I wanted to change that.  This is a Trello style application that tracks individual items with cards.  The front end was built with JaceScript in React, and the back end was built using Express with a PostgreSQL database.',
+        gh_link: 'https://github.com/jasonbracco/WeddingWizard',
         index: 1
     }
 
     let photo_share: TechnicalProject = {
         name: 'PhotoShare',
-        description: 'My fiance is a very talented photographer, and I wanted to build a program to show off some of her work.  This is an ecommerce website made for photographers and buyers/sellrs of photography.  Users can list their work to be sold, and buy other listed items from various artists.  Built using a React front end written in JavaScript with a Ruby on Rails back end, data stored using a PostgreSQL database and images hosted in an Amazon S3 bucket.',
+        description: 'My fiance is a very talented photographer, and I wanted to build a program to show off some of her work.  This is an ecommerce website made for photographers and buyers/sellrs of photography.  Users can list their work to be sold, and buy other listed items from various artists.  Built using a React front end written in JavaScript with a Ruby on Rails back end, data stored using a PostgreSQL database.',
         gh_link: 'https://github.com/jasonbracco/phase-5-project',
-        demo_link: 'coming soon',
         index: 2
     }
 
@@ -30,7 +28,7 @@ function Experience(){
         period: '08/2014 - 05/2018',
         index: 3,
         description: 'I knew from a young age I wanted to know how things worked.  I went into Mechanical Engineering because it formed the basis for how things got built and interacted with the world.  The mindset I built going through this program laid the foundation for how I want to approach my life and career.',
-        image: 'src/Photos/gw.png'
+        image: 'src/Photos/gw.jpg'
     }
 
     let flatiron: Education = {
@@ -41,7 +39,7 @@ function Experience(){
         period: '04/2022 - 04/2023',
         index: 4,
         description: 'Keeping with the theme of trying to understand how things work, I realized that my curiosity was shifting from the physical to the digital.  I wanted to understand and learn how the applications I interact with every day were created, and I wanted to be able to bring my own ideas to life.',
-        image: 'src/Photos/flatiron.png'
+        image: 'src/Photos/flatiron.jpg'
     }
 
     let mba_csi: WorkExperience = {
@@ -56,7 +54,7 @@ function Experience(){
             'I was not fond of the pace at which everything operated at the USPS vehicle engineering office, and I quickly found my curiosity in the various programs waning.  I knew I needed a pivot.'
         ],
         index: 5,
-        image: 'src/Photos/mba.png'
+        image: 'src/Photos/mba.jpg'
 
     }
 
@@ -73,7 +71,7 @@ function Experience(){
             'I was able to bring the engineering mindset I had developed and channel my curiosity toward picking up what had been totally foreign concepts - eventually mastering these concepts to a point where I could effectively resolve issues in the field, and become an internal subject matter expert.' 
         ],
         index: 6,
-        image: 'src/Photos/aquicore.png',
+        image: 'src/Photos/aquicore.jpg',
     }
     
     let aquicore_two: WorkExperience = {
@@ -91,7 +89,7 @@ function Experience(){
             'Now that i have become a certified full stack software engineer, I have started on the next journey in this role - doing some hands on engineering work in a support capacity.  I cannot wait to see where this takes me.'
         ],
         index: 7,
-        image: 'src/Photos/infogrid.png'
+        image: 'src/Photos/infogrid.jpg'
 
     }
  

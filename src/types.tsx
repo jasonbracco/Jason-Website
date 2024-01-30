@@ -24,6 +24,5 @@ export type TechnicalProject = {
     name: string,
     description: string,
     gh_link: string,
-    demo_link: string,
     index: number
 };

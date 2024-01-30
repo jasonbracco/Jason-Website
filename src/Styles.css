@@ -25,9 +25,9 @@
 }
 
 .navbar a {
-    text-decoration: none; /* removes underlines */ 
-    color: rgb(255, 255, 255); /* Adjust the alpha value (0.5) to control opacity */
-    margin: 0 10px; /* add spacing between links */
+    text-decoration: none; 
+    color: rgb(255, 255, 255); 
+    margin: 5px 30px;
 }
 
 .navbar a:hover { /*styling for the links when hovered */
@@ -35,26 +35,14 @@
     color: rgba(90, 64, 6, 0.76);
 }
 
-.image-container { 
-    /* width: 100vw;  */
-    /* height: 100vh;  */
-    /* overflow: hidden;  */
-    z-index: 1; /* Set the z-index to 1 to place it behind the navbar */
-}
-
 .text-overlay {
-    position: absolute;
+    position: absolute; 
     top: 48%;
     left: 45%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); 
     transform: translateY(-50%);
-    padding: 10px;
     color: white;
     text-align: center;
-}
-
-.text-overlay h2 {
-    margin: 0; /* Remove default margin for headings */
 }
 
 .image{
@@ -123,15 +111,6 @@
     background-color: rgba(255, 255, 255, 0.3); /* Adjust the alpha value (0.5) to control opacity */
     font-size: large;
 }
-
-  .fixed-background-image {
-    background-image: url('./Photos/canyon.png');
-    /* background-size: cover; */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
 
 .where-i-text{
     color: rgb(149, 213, 114);
