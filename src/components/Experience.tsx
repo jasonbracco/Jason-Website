@@ -1,4 +1,4 @@
-import { WorkExperience, Education, TechnicalProject } from '../types';
+import { WorkExperience, Education } from '../types';
 import ExperienceCard from './ExperienceCard';
 import EducationCard from './EducationCard';
 
@@ -6,23 +6,9 @@ import EducationCard from './EducationCard';
 
 function Experience(){
 
-    let restaurant_review: TechnicalProject = {
-        name: 'Wedding Wizard',
-        description: 'As my fiance and I were planning our wedding, I found it an visually unappealing to track everything in a spreadsheet.  There was no satisfaction when a task was completed, and I wanted to change that.  This is a Trello style application that tracks individual items with cards.  The front end was built with JaceScript in React, and the back end was built using Express with a PostgreSQL database.',
-        gh_link: 'https://github.com/jasonbracco/WeddingWizard',
-        index: 1
-    }
-
-    let photo_share: TechnicalProject = {
-        name: 'PhotoShare',
-        description: 'My fiance is a very talented photographer, and I wanted to build a program to show off some of her work.  This is an ecommerce website made for photographers and buyers/sellrs of photography.  Users can list their work to be sold, and buy other listed items from various artists.  Built using a React front end written in JavaScript with a Ruby on Rails back end, data stored using a PostgreSQL database.',
-        gh_link: 'https://github.com/jasonbracco/phase-5-project',
-        index: 2
-    }
-
     let gw: Education = {
-        name:'The George Washington University',
-        program: 'School of Engineering and Applied Sciences (SEAS)',
+        name:'George Washington University',
+        program: 'School of Engineering and Applied Sciences',
         degree: 'Bachelor of Science, Mechanical Engineering, concentration in Aerospace Engineering',
         location: 'Washington, DC',
         period: '08/2014 - 05/2018',
@@ -95,7 +81,6 @@ function Experience(){
  
     let experienceArray = [aquicore_two, aquicore_one, mba_csi];
     let educationArray = [flatiron, gw];
-    let technicalProjectsArray = [restaurant_review, photo_share];
 
     return (
         <div>

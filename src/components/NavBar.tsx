@@ -19,7 +19,7 @@ function NavBar() {
                                 <Link className="nav-link" to="/experience">Experience</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Projects</a>
+                                <Link className="nav-link" to="/projects">Projects</Link>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="https://medium.com/@bracco.jason">Blog <BsMedium /></a>
